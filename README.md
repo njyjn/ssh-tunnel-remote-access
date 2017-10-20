@@ -79,7 +79,9 @@ Assuming you are using port `5900`, type in `vnc://localhost:5900` and hit <kbd>
 
 Note that the SSH tunnel must be open on both servers for the VNC to continue running. I would suggest keeping it running on your remote server, in non-interactive mode.
 
-```shell
+You may also need to go to the Sharing settings in your remote server and check the boxes for `Screen Sharing`.
+
+``` shell
 ssh -nNT hostname
 ```
 
