@@ -1,0 +1,15 @@
+# Rename and place this file inside the ~/.ssh directory of the local server you would like to access from
+
+# Optional settings
+Host *
+  AddKeysToAgent yes
+  UseKeychain yes
+  IdentitiesOnly yes # use this to enforce SSH key pair security
+  IdentityFile ~/.ssh/id_rsa
+
+Host hostname
+  User username
+  HostName 0.0.0.0      # IP address of cloud server
+  #LocalForward <Port on local server> <IP address on cloud server:Port on cloud server>
+  LocalForward 2223 localhost:2222
+  LocalForward 5900 127.0.0.1:5900
